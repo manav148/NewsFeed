@@ -1,0 +1,69 @@
+.card_bkground{
+  position: absolute;
+}
+.card_content_bkground{
+  position: absolute;
+  top: 14%;
+  left: 5%;
+  right: 5%;
+}
+.media_position{
+  left: inherit;
+}
+.blur{
+  -webkit-filter: blur(3px) grayscale(20%);
+}
+.cards{
+  margin-bottom: 10px;
+  height: 500px;
+}
+.top-margin{
+  margin-top: 5px;
+}
+.no-margin{
+  margin: 0px;
+}
+.bottom-margin{
+  margin-bottom: 5px;
+}
+.content{
+  clear: left;
+  height: 180px;
+}
+.content-body{
+  display: block;
+  /*height: 180px;*/
+  /*margin-left: 19px;*/
+}
+.content-header{
+  display: block;
+}
+.content-image{
+  display: block;
+  margin-top: 20px;
+  /*float: left;*/
+}
+.carousel-inner > .item > img {
+    margin: auto;
+}
+
+.content-related{
+  padding-left: 10px;
+}
+.content-heading{
+  margin-bottom: 5px;
+}
+.content-text{
+ margin-bottom: 5px; 
+}
+.navbar-brand{
+  padding-top: 0px;
+}
+.text-shadow-black{
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+#front-image-main-text{
+  color: white;
+  text-shadow: black 0.1em 0.1em 0.2em;
+  
+}

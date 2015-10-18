@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="{{parameters['ROOT']}}{{parameters['urls']['assets']}}" type="image/x-icon">
+    <link rel="icon" href="{{parameters['ROOT']}}{{parameters['urls']['assets']}}" type="image/x-icon">
+    <title>iish</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{parameters['urls']['bootstrap_css']}}" rel="stylesheet">
+    <link href="{{parameters['ROOT']}}{{parameters['urls']['ziish_css']}}" rel="stylesheet" type="text/css" >
+  </head>
+
+  <body>
+    {% block nav %}
+    {% endblock nav %}
+    {% block body %}
+    {% endblock body %}
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="{{parameters['urls']['jquery_js']}}"></script>
+  <script src="{{parameters['urls']['bootstrap_js']}}"></script>
+  </body>
+</html>

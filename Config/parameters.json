@@ -1,0 +1,17 @@
+{
+    "FAROO_KEY" : "Set Key Here",
+    "ROOT"  : ".",
+    "front_page_image" : {
+        "width" : 900,
+        "height" : 480,
+        "images" : 3
+        },
+    "urls": {
+        "assets" : "/Assets/favicon.ico",
+        "ziish_css" : "/Assets/css/ziish.css",
+        "brand" : "/Assets/logo/ziishBold30Glow.png",
+        "bootstrap_css" : "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css", 
+        "bootstrap_js": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js",
+        "jquery_js": "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"
+    }
+}

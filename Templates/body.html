@@ -1,0 +1,101 @@
+{% extends "nav.html" %}
+{% block body %}
+
+<div class="container-fluid">
+  <!-- <div class="row clearfix">
+    <div class="col-md-12 column">
+      <img class="center-block" src="http://lorempixel.com/728/90/" class="media-object" alt='' />
+    </div>
+  </div> -->
+  
+
+
+  <div class="row clearfix">
+    <div id="carousel-example-generic" class="carousel slide top-margin" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        {% for post in front_page_post %}
+        <li data-target="#carousel-example-generic" data-slide-to="{{loop.indexo}}" class=""></li>
+        {% endfor %}
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        {% for post in front_page_post %}
+        <div class="item {% if loop.first %}active{% endif %}">
+          <img src="{{post.iurl}}" alt="..." style="width : {{parameters['front_page_image']['width']}}px;height : {{parameters['front_page_image']['height']}}px;">
+          <div class="carousel-caption">
+            <a href="{{post.url}}"><h2 id="front-image-main-text">{{post.title}}</h2></a>
+            <!-- <h4 class="text-muted">{{post.kwic}}</h4> -->
+            <br>
+            <div class="metadata small text-shadow-black">
+                <span class= "pull-right">- {% if not post.author == "" %}{{post.author| title}}, {% endif %}{{post.domain_name | title}}</span>
+              </div>
+          </div>
+        </div>
+        {% endfor %}
+        
+      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+
+
+  <div class="row clearfix">
+    <div class="col-md-9 column top-margin">
+      {% for items in faroo_data %}
+      <div class="row well well-sm bottom-margin">
+        <div class="col-md-2  hidden-xs column">
+          <div class="content-image">
+            <a href="{{items[0].url}}"  >
+              <img class="thumbnail" style="height: 143px;width: 100%;"src="{{items[0].iurl}}" alt='' />
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6  column">
+          <div class="content-body text-justify">
+            <div class="content-heading lead">
+              <a href="{{items[0].url}}">{{items[0].title}}</a>
+            </div> 
+            <div class="content-text lead">
+              <blockquote class="no-margin">
+                <!-- Body of text -->
+                {{items[0].kwic}}
+              </blockquote>
+            </div>
+              <!-- <div class="text-muted small">- {% if not items[0].author == "" %}{{items[0].author| title}}, {% endif %}<a href="{{items[0].url}}">{{items[0].domain_name | title}}</a></div> -->
+              <div class="metadata text-muted small">
+                {% if items[0].date %}<span><script>document.write(new Date({{items[0].date}}).toDateString());</script></span>{% endif %}
+                <span class= "pull-right">- {% if not items[0].author == "" %}{{items[0].author| title}}, {% endif %}{{items[0].domain_name | title}}</span>
+              </div>
+          </div>
+         </div>
+          <div class="col-md-4  hidden-xs column content-related text-justify">
+            <h6>Related:</h6>
+            <ul>
+              {% for related_item in items[1:]  %}
+                <li><a href="{{related_item.url}}" class="small">{{related_item.title}}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="col-md-3 column top-margin">
+      {% include './Ads/runserver_side.html' %}
+      <!-- <img class="center-block" alt="140x140" src="http://lorempixel.com/336/600/" /> -->
+    </div>
+  </div>
+</div>
+
+{% endblock body %}

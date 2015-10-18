@@ -1,0 +1,4 @@
+create environment variables 
+PYTHONPATH with link to Conf directory
+pip install tldextract
+pip install Pillow
